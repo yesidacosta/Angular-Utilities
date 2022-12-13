@@ -1,0 +1,63 @@
+<div class="container-fluid p-0 m-0 page">
+    <div class="row d-flex flex-row page-content">
+        <aside class="col-12 col-md-3 d-flex justify-content-center align-items-center aside">
+            <h2 class="aside-title">Interpolaciòn de variables</h2>
+        </aside>
+        
+        <div class="col-12 col-md-9 p-4 screen-content">
+            <div class="row">
+                <div class="col">
+                    <h2 class="screen-title">INTERPOLACIÒN DE VARIABLES</h2>
+                    <p>Caracteristica para embeber expresiones que pueden ser.</p>
+                    <ul>
+                        <li>Strings</li>
+                        <li>Operaciones matemàticas bàsicas</li>
+                        <li>Mètodos que devuelven valores</li>
+                        <li>Expresiones lògicas</li>
+                    </ul>
+                    <p>Las expresiones se encierran entre <strong class="screen-title">{{ "{{ }}" }}</strong></p>
+                    <p>La interpolaciòn se hace desde el controlador hacia la vista, No deben contener sentencias que afecten el componente como:</p>
+                    <ul>
+                        <li>Asignación</li>
+                        <li>Incrementos</li>
+                        <li>Decrementos</li>
+                    </ul>
+                    <p>Si no se cumple, devuelve un error</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h2 class="screen-title">Ejemplo</h2>
+                    <table>
+                        <th colspan="2" class="table-title">
+                            Interpolar variable
+                        </th>
+                        <tbody>
+                        <tr>
+                                <td class="col-6">Código</td>
+                                <td class="col-6" >Resultado</td>
+                            </tr>
+                            <tr>
+                                <td class="col-6">{{"\<p>{{" + "variableInterpolada" + "}}\</p>"}}</td>
+                                <td class="col-6">{{variableInterpolada}}</td>
+                            </tr>
+                            <tr>
+                                <td class="col-6">{{"\<p>{{" + "1 + 7" + "}}\</p>"}}</td>
+                                <td class="col-6">{{1 + 7}}</td>
+                            </tr>
+                            <tr>
+                                <td class="col-6">{{"\<p>{{" + "true" + "}}\</p>"}}</td>
+                                <td class="col-6">{{ true }}</td>
+                            </tr>
+                            <tr>
+                                <td class="col-6">{{ getCadena }}</td>
+                                <td class="col-6">{{ getCadena() }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>

@@ -1,0 +1,136 @@
+<div class="container-fluid p-0 m-0 page">
+    <div class="row d-flex flex-row page-content">
+        <aside class="col-12 col-md-3 d-flex justify-content-center align-items-center aside">
+            <h2 class="aside-title">Directiva ngIF</h2>
+        </aside>
+
+        <div class="col-12 col-md-9 p-4 screen-content">
+            <div class="row">
+                <div class="col">
+                    <h2 class="screen-title">DIRECTIVA ngIF</h2>
+                    <p>Una directiva estructural que incluye condicionalmente una plantilla basada en el valor de una
+                        expresión forzada a booleana</p>
+
+                    <p>Para usar la directiva ngIf <strong class="screen-title">{{ "*ngIf = 'Condición'" }}</strong></p>
+                    <p>Para usar la directiva ngIf en un ng-template <strong class="screen-title">{{ "[ngIf] = 'Condición'" }}</strong></p>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h2 class="screen-title">Ejemplo</h2>
+                    <table>
+                        <th colspan="2" class="table-title">
+                            Casos ngIf
+                        </th>
+                        <tbody>
+                            <tr>
+                                <div class="col-4">Caso</div>
+                                <td class="col-4">Código</td>
+                                <td class="col-4">Resultado</td>
+
+                            </tr>
+                            <tr>
+                                <td class="col-4">
+                                    <p>Directiva en un elemento HTML</p>
+                                </td>
+                                <td class="col-4">
+                                    <div class="col my-5">
+                                        <pre><code></code></pre>
+                                    </div>
+                                </td>
+                                <td class="col-4">
+                                    <div class="col">
+                                        <div *ngIf="true">Content to renderizado cuando condición es true</div>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="col-4">
+                                    <p>Directiva en un ng-template</p>
+
+                                </td>
+                                <td class="col-4">
+                                    <div class="col my-5">
+                                        <pre><code></code></pre>
+                                    </div>
+                                </td>
+                                <td class="col-4">
+                                    <div class="col">
+                                        <ng-template [ngIf]="true">
+                                            <div>Content to renderizado cuando condición es true.</div>
+                                        </ng-template>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="col-4">
+                                    <p>Directiva con if - else</p>
+
+                                </td>
+                                <td class="col-4">
+                                    <div class="col my-5">
+                                        <pre><code></code></pre>
+                                    </div>
+                                </td>
+                                <td class="col-4">
+                                    <div class="col">
+                                        <div *ngIf="false else elseBlock">Contenido renderizado si es true.
+                                        </div>
+                                        <ng-template #elseBlock>Contenido renderizado si es false.</ng-template>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="col-4">
+                                    <p>Directiva con if - then - else</p>
+
+                                </td>
+                                <td class="col-4">
+                                    <div class="col my-5">
+                                        <pre><code></code></pre>
+                                    </div>
+                                </td>
+                                <td class="col-4">
+                                    <div class="col">
+                                        <div *ngIf="true; then thenBlock else elseBlock"></div>
+                                        <ng-template #thenBlock>Content renderizado cuando condición es
+                                            true.</ng-template>
+                                        <ng-template #elseBlock>Contenido renderizado cuando condición es
+                                            false.</ng-template>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-4">
+                                    <p>Directiva con if con condición dependiente de una variable</p>
+                                </td>
+                                <td class="col-4">
+                                    <div class="col my-5">
+                                        <pre><code></code></pre>
+                                    </div>
+                                </td>
+                                <td class="col-4">
+                                    <div class="col">
+                                        <p>Verdadero: se asigna el valor de la condición</p>
+                                        <div *ngIf="'Cadena truthy' as valor; else elseBlock2">{{valor}}</div>
+                                        <ng-template #elseBlock2>Content to render when value is null.</ng-template>
+                                        <br><br>
+                                        <p>Falso</p>
+                                        <div *ngIf="false as valor; else elseBlock2">{{valor}}</div>
+                                        <ng-template #elseBlock2>Content to render when value is null.</ng-template>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

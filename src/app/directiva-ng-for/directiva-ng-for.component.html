@@ -1,0 +1,107 @@
+<div class="container-fluid p-0 m-0 page">
+    <div class="row d-flex flex-row page-content">
+        <aside class="col-12 col-md-3 d-flex justify-content-center align-items-center aside">
+            <h2 class="aside-title">Directiva ngFor</h2>
+        </aside>
+
+        <div class="col-12 col-md-9 p-4 screen-content">
+            <div class="row">
+                <div class="col">
+                    <h2 class="screen-title">DIRECTIVA NgForOf o ngFor</h2>
+                    <p>Una directiva estructural representa un ciclo para recorrer cada elemento de una colección. La directiva se coloca en un elemento y este se convierte en el padre de los elementos renderizados de la colección.</p>
+
+                    <p>Para usar la directiva ngFor <strong class="screen-title">{{ "*ngFor = let item of items; index as i; trackBy: trackByFn" }}</strong></p>
+                    <ul>
+                        <li>items:   Colección</li>
+                        <li>item:    Elemento de la colección</li>
+                        <li>index:   Indice generado por el ciclo</li>
+                        <li>i:   Indice asignado desde index</li>
+                        <li>trackBy:   Clave de función de seguimiento</li>
+                        <li>trackByFn:    Función de seguimiento</li>
+                    </ul>
+                    <!-- <p>Para usar la directiva ngIf en un ng-template <strong class="screen-title">{{ "[ngIf] = 'Condición'" }}</strong></p> -->
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h2 class="screen-title">Ejemplo</h2>
+                    <table>
+                        <th colspan="2" class="table-title">
+                            Casos ngFor
+                        </th>
+                        <tbody>
+                            <tr>
+                                <div class="col-4">Caso</div>
+                                <td class="col-4">Código</td>
+                                <td class="col-4">Resultado</td>
+                            </tr>
+                            <tr>
+                                <td class="col-4">
+                                    <p>Directiva en un elemento HTML</p>
+                                </td>
+                                <td class="col-4">
+                                    <div class="col my-5">
+                                        <pre><code></code></pre>
+                                    </div>
+                                </td>
+                                <td class="col-4">
+                                    <div class="col">
+                                        <div *ngFor="let item of items;">{{item}}</div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="col-4">
+                                    <p>Directiva con indice</p>
+                                </td>
+                                <td class="col-4">
+                                    <div class="col my-5">
+                                        <pre><code></code></pre>
+                                    </div>
+                                </td>
+                                <td class="col-4">
+                                    <div class="col">
+                                        <div *ngFor="let item of items; index as i">
+                                            <p class="m-0">Indice: {{i}} Item: {{item}}</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="col-4">
+                                    <p>Directiva con función de seguimiento</p><br>
+                                    <ul>
+                                        <li>No se recorre todo el Ciclo For</li>
+                                        <li>Recomendación cuando se tiene elementos con un Id único</li>
+                                        <li>Util para realizar cambios únicamente sobre elementos nuevos o modificados.</li>
+                                        <li>Aumenta la eficiencia del rendimiento</li>
+                                    </ul>
+                                    
+                                </td>
+                                <td class="col-4">
+                                    <div class="col my-5">
+                                        <pre><code></code></pre>
+                                    </div>
+                                </td>
+                                <td class="col-4">
+                                    <div class="col">
+                                        <p>Abrir el inspector de elementos para que los cambios únicamente se hacen sobre los elementos nuevos o modificados</p>
+                                        <div *ngFor="let planeta of planetas; index as i; trackBy trackByItem">
+                                            <p>planeta: {{planeta.nombre}}</p>
+                                        </div>
+                                        <button (click)="recargarFor()">Refrescar NgFor</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

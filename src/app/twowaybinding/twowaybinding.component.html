@@ -1,0 +1,64 @@
+<div class="container-fluid p-0 m-0 page">
+    <div class="row d-flex flex-row page-content">
+        <aside class="col-12 col-md-3 d-flex justify-content-center align-items-center aside">
+            <h2 class="aside-title">Two Way Binding</h2>
+        </aside>
+        
+        <div class="col-12 col-md-9 p-4 screen-content">
+            <div class="row">
+                <div class="col">
+                    <h2 class="screen-title">TWO WAY BINDING</h2>
+                    <p>Mecanismo en el que: </p>
+                    
+                    <ul>
+                        <li>Cuando las propiedades del controlador actualizan, tambièn lo hace la interfaz de usuario.
+                        </li>
+                        <li>Cuando los elemenots de la interfaz de usuario se actualizan los cambios se propagan al controlador.
+                        </li>
+                    </ul>
+                    <p>Para usarlo se necesita la directiva NgModel e importar FormsModule en App.module.ts</p>
+                    <p>Para crear un Mecanismo Two Way Binding se una la sintaxis:    <strong class="screen-title">{{ '\[\(  ... \)\]' }}</strong></p>
+                    
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h2 class="screen-title">Ejemplo</h2>
+                    <table>
+                        <th colspan="2" class="table-title">
+                            Two Way Binding
+                        </th>
+                        <tbody>
+                            <tr>
+                                <td class="col-6">Código</td>
+                                <td class="col-6" >Resultado</td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="col-6">
+                                    <div class="col my-5">
+                                        {{"\[\(ngModel\)\]='datoTwoWayBinding'"}}
+                                    </div>
+                                    <div>
+                                        <p>Cambiar valor de la variable en el controlador para otro caso de binding</p>
+                                    </div>
+
+                                </td>
+                                <td class="col-6">
+                                    <div class="col my-2">
+                                        <p>Valor de variable TwoWayBinding: {{datoTwoWayBinding}}</p>
+                                        <input type="text" placeholder="Ingrese un texto" [(ngModel)]="datoTwoWayBinding">
+                                    </div>
+                                    <button (click)="valorActual()">Ver valor actual</button>
+                                </td>
+                  
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>

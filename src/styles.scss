@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Typo Formal';
+    src: url('./assets/fonts/typo_formal/Typo\ Formal\ Bold\ Demo.otf');
+}
+
+
+table, th, thead{
+    width: 100%;
+}
+
+.page {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.page-content{
+    height: 100%;
+}
+
+.aside {
+    height: auto;
+    min-width: 14em;
+    padding: 2em;
+    color: #fafaff;
+    text-align: center;
+    background: rgb(72,48,77);
+    background: linear-gradient(90deg, rgba(72,48,77,1) 0%, rgba(72,48,77,1) 87%, rgba(230,55,191,1) 87%, rgba(230,55,191,1) 92%, rgba(248,101,176,1) 92%, rgba(248,101,176,1) 96%, rgba(251,202,239,1) 96%, rgba(251,202,239,1) 96%);
+}
+
+.aside-title {
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    font-size: clamp(0.3em, 2em, 2em);
+    margin-right: 1.4em;
+    word-wrap: break-word;
+}
+
+.screen-content{
+    font-family: 'Century Gothic';
+    font-weight: bold;
+}
+
+.screen-title{
+    font-family: 'Typo Formal';
+}
+
+.table-title{
+    font-family: 'Typo Formal';
+    text-align: center;
+}

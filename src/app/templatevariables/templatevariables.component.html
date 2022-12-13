@@ -1,0 +1,71 @@
+<div class="container-fluid p-0 m-0 page">
+    <div class="row d-flex flex-row page-content">
+        <aside class="col-12 col-md-3 d-flex justify-content-center align-items-center aside">
+            <h2 class="aside-title">Template variables</h2>
+        </aside>
+        
+        <div class="col-12 col-md-9 p-4 screen-content">
+            <div class="row">
+                <div class="col">
+                    <h2 class="screen-title">TEMPLATE VARIABLES</h2>
+                    <p>Ayudan a usar datos de una parte de la platilla en otra parte de la misma.</p>
+                    <p>Es una referencia a al elemento donde se encuentre</p>
+                    <ul>
+                        <li>Si declara la variable en un componente,la variable se refiere a la instancia del componente.
+                        </li>
+                        <li>Si se declara la variable en una etiqueta HTML estándar,la variable se refiere al elemento.
+                        </li>
+                        <li>Si declara la variable en un elemento {{"\<ng-template\>"}} la variable hace referencia a una instancia de TemplateRef que representa la plantilla.</li>
+                    </ul>
+                    <p>Para crear una Template Variable <strong class="screen-title">{{ "#templateVariable" }}</strong></p>
+                    
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h2 class="screen-title">Ejemplo</h2>
+                    <table>
+                        <th colspan="2" class="table-title">
+                            Template variables
+                        </th>
+                        <tbody>
+                            <tr>
+                                <td class="col-6">Código</td>
+                                <td class="col-6" >Resultado</td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="col-6">
+                                    <div class="col my-5">
+                                        <input type="text" placeholder="Ingrese un texto" #templateVariableValor>
+                                        <button type="button" (click)="gestionarTemplateVariable(templateVariableValor.value)">Confirmar</button>
+                                    </div>
+
+                                    <div class="col my-5">
+                                        
+                                        <img src="http://placeimg.com/150/150" alt="SampleImg"#templateVariableReferencia><br>
+                                        <button type="button" (click)="gestionarTemplateVariable(templateVariableReferencia)">Referencia a imágen</button>
+                                    </div>
+                                    <div class="col my-5">
+                                        <a href="https://runebook.dev/es/docs/angular/guide/template-reference-variables">Más casos en runebook.com</a>
+                                    </div>
+                                </td>
+                                <td class="col-6">
+                                    <div class="col">
+                                        <p>{{templateVariableValor.value}}</p>
+                                    </div>
+                                    <div class="col">
+                                        Ver resultado de referencia en consola
+                                    </div>
+                                </td>
+                  
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>

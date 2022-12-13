@@ -1,0 +1,55 @@
+<div class="container-fluid p-0 m-0 page">
+    <div class="row d-flex flex-row page-content">
+        <aside class="col-12 col-md-3 d-flex justify-content-center align-items-center aside">
+            <h2 class="aside-title">Property Binding</h2>
+        </aside>
+        
+        <div class="col-12 col-md-9 p-4 screen-content">
+            <div class="row">
+                <div class="col">
+                    <h2 class="screen-title">PROPERTY BINDING</h2>
+                    <p>Mecanismo para establecer valores a los atributos HTML.</p>
+                    <p>Permite la transferencia de datos desde el componente hacia la vista</p>
+                    
+                    <p>Para crear una Template Variable <strong class="screen-title">{{ "[atributo] = 'Valor'" }}</strong></p>
+                    
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h2 class="screen-title">Ejemplo</h2>
+                    <table>
+                        <th colspan="2" class="table-title">
+                            Casos property binding
+                        </th>
+                        <tbody>
+                            <tr>
+                                <td class="col-6">Código</td>
+                                <td class="col-6" >Resultado</td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="col-6">
+                                    <div class="col my-5">  
+                                        <pre><code>{{"\<img \[src\]='source' \[width\]='widthSize' alt='SampleImg'>\<br>"}}</code></pre>
+                                    </div>
+                                </td>
+                                <td class="col-6">
+                                    <div class="col">
+                                        <p>src: http://placeimg.com/150/150</p>
+                                        <p>width: Se establece en tres segundos</p>
+                                        <img [src]="source" [width]="widthSize" alt="SampleImg"><br>
+                                        
+                                    </div>
+                                </td>
+                  
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>

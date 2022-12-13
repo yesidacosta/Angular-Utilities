@@ -1,0 +1,59 @@
+<div class="container-fluid p-0 m-0 page">
+    <div class="row d-flex flex-row page-content">
+        <aside class="col-12 col-md-3 d-flex justify-content-center align-items-center aside">
+            <h2 class="aside-title">
+                Event Bindng
+            </h2>
+        </aside>
+        
+        <div class="col-12 col-md-9 p-4 screen-content">
+            <div class="row">
+                <div class="col">
+                    <h2 class="screen-title">EVENT BINDING</h2>
+                    <p>Mecanismo del envio de datos mediante el cual se trabaja los eventos enviados desde el DOM.</p>
+                    
+                    <p>Para crear un Evento <strong class="screen-title">{{ "(tipoEvento) = 'metodoEjecutar($eventoOpcional) '" }}</strong></p>
+                    
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h2 class="screen-title">Ejemplo</h2>
+                    <table>
+                        <th colspan="2" class="table-title">
+                            Template variables
+                        </th>
+                        <tbody>
+                            <tr>
+                                <td class="col-6">Código</td>
+                                <td class="col-6" >Resultado</td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="col-6">
+                                    <div class="col my-5">
+                                        <button type="button" (click)="accionEvento()">Ejecutar acción</button>
+                                    </div>
+                                    <div class="col my-5">
+                                        <button type="button" (click)="accionEventoConParametro($event)">Ejecutar Acción con parametro evento</button>
+                                    </div>
+                                </td>
+                                <td class="col-6">
+                                    <div class="col">
+                                        <p>{{resultadoEvento}}</p>
+                                    </div>
+                                    <div class="col">
+                                        <p>{{resultatoEventoParametro}}</p>
+                                    </div>
+                                </td>
+                  
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
